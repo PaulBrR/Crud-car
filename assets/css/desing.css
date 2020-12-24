@@ -1,0 +1,17 @@
+/* Card */
+/* #carCard.hide {
+    left: -2000px;
+} */
+/* ================== Menu  */
+#carCard {
+    display: none;
+}
+
+/* ================== Images  */
+
+.img-adapted {
+       height: 200px;
+       width: 200px;
+       background-size: cover;
+
+}

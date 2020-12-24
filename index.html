@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Autos </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/desing.css">
+</head>
+<body>
+    <!-- Brand Model Color Year Price Photography -->
+    <div class="container mt-5">
+        <div id="carCard" class="card">
+            <div class="card-body">
+                <form id="form-car" onsubmit="event.preventDefault(), addCar()" action="/cars.php">
+                    <div class="form-group">
+                        <label for="brand"> Car Brand</label>
+                        <input type="text" class="form-control" id="brand" placeholder="Enter car brand" required>            
+                    </div>      
+                    <div class="form-group">
+                        <label for="model" >Car Model</label>
+                        <input type="text" class="form-control" id="model" placeholder="Enter car model">
+                    </div>
+                    <div class="form-group">
+                        <label for="Color">Car Color</label>
+                        <input type="text" class="form-control" id="color" placeholder="Enter car Color">
+                    </div>
+                    <div class="form-group">
+                        <label for="year"> Year of the Car</label>
+                        <input type="text" class="form-control" id="year" placeholder="Enter the year of the car">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Car Price</label>
+                        <input type="number" class="form-control" id="price" placeholder="Enter the car price" required>
+                    </div>
+                    <button type="submit" onclick="showCard()" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <button  onclick="showCard()" class="btn btn-success">Add Car</button>
+        <table class="table ">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Model</th>
+                    <th>Color</th>
+                    <th>Year</th>
+                    <th>Price</th>
+                    <th>Photography</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody id="container-cars">
+                
+
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="./assets/js/javascript.js"></script>
+</body>
+</html>
